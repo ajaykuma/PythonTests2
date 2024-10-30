@@ -1,0 +1,90 @@
+--When installing jupyter notebook from folder where you intend to have your .ipynb files
+
+> pip install jupyter
+--if error
+
+python -m pip install --upgrade pip
+pip install --upgrade pip setuptools wheel
+
+--Try again
+> pip install jupyter
+
+--may need rust package manager
+visit & follow instructions > https://rustup.rs/
+
+--if still facing error check if python installed is 32bit or 64 bit ,if 32 bit then we need 64 bit.
+
+--Install latest version say 3.12
+--make sure to add python path in system/environment variables 
+
+--try again
+
+pip install jupyter
+
+>where python
+--cd to python path
+
+C:\Users\Ajay kumar\AppData\Local\Microsoft\WindowsApps>python -m pip show jupyter
+Name: jupyter
+Version: 1.1.1
+Summary: Jupyter metapackage. Install all the Jupyter components in one go.
+Home-page: https://jupyter.org
+Author: Jupyter Development Team
+Author-email: jupyter@googlegroups.org
+License: BSD
+Location: C:\Users\Ajay kumar\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.12_qbz5n2kfra8p0\LocalCache\local-packages\Python312\site-packages
+Requires: ipykernel, ipywidgets, jupyter-console, jupyterlab, nbconvert, notebook
+Required-by:
+
+--launching jupyter 
+> jupyter notebook
+
+or 
+>jupyterlab
+
+--If throws error, try changing path as shown above and try..
+
+If still issues,
+remove jupyter related packages
+python pip uninstall jupyter*
+--or specific packages
+python pip uninstall jupyter
+python pip uninstall jupyterlab
+etc..
+
+C:\Users\Ajay kumar\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.12_qbz5n2kfra8p0\LocalCache\local-packages\Python312\site-packages>pip install jupyterlab
+cd ..
+cd Scripts
+C:\Users\Ajay kumar\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.12_qbz5n2kfra8p0\LocalCache\local-packages\Python312\Scripts
+
+--launch
+> jupyterlab
+
+shows...
+
+    To access the server, open this file in a browser:
+        file:///C:/Users/Ajay%20kumar/AppData/Roaming/jupyter/runtime/jpserver-2900-open.html
+    Or copy and paste one of these URLs:
+        http://localhost:8888/lab?token=db8632b9c9c6ad057061a43ee70da093d11cd94edafe955f
+        http://127.0.0.1:8888/lab?token=db8632b9c9c6ad057061a43ee70da093d11cd94edafe955f
+
+Access using: http://localhost:8888/lab?token=db8632b9c9c6ad057061a43ee70da093d11cd94edafe955f
+
+<choose browser as chrome or your chosen>
+This will open http://localhost:8888/lab which shows Notebook, Console, other options
+
+or we can start 
+>jupyter notebook
+
+--Let's set this path to use jupyter notebook from our project folder or anywhere
+JUPYTER_HOME=C:\Users\Ajay kumar\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.12_qbz5n2kfra8p0\LocalCache\local-packages\Python312\Scripts
+
+path
+C:\Users\Ajay kumar\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.12_qbz5n2kfra8p0\LocalCache\local-packages\Python312\Scripts\jupyter
+C:\Users\Ajay kumar\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.12_qbz5n2kfra8p0\LocalCache\local-packages\Python312\Scripts\jupyterlab
+
+
+
+
+
+
